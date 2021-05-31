@@ -1,5 +1,5 @@
-package Stacks;
 
+package Stacks;
 import java.util.Stack;
 
 public class BalancingBrackets {
@@ -40,7 +40,7 @@ public class BalancingBrackets {
     return(stack.isEmpty());
 }
         public static void main (String args[]){
-            String expr = "[()][{}()][](){}([{}(())([[{}]])][])[]([][])(){}{{}{[](){}}}()[]({})[{}}]]}])}]]})]";
+            String expr = "[()]";
             
             if (areBracketsBalanced(expr)!=false){
                 System.out.println("Balanced");
