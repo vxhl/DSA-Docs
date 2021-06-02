@@ -21,7 +21,6 @@ public class QueueWithArrays {
         return(queue.size == queue.capacity);
     }
 
-    
     boolean isEmpty(QueueWithArrays queue) 
     {
         return(queue.size == 0);
@@ -44,7 +43,7 @@ public class QueueWithArrays {
         this.front = (this.front + 1)%this.capacity;
         this.size = this.size - 1; // Since dequeing the element reduces the size for the array by 1
         return data;
-
+        
     }
     int front() {
         return(this.array[front]);
