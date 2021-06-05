@@ -1,6 +1,6 @@
+// Problem Statement : To implement Queues with linked lists
+// Time complexty : O(1)
 package Queues;
-
-
 // We first define a linked list node to define a queue entry
 public class QueueWithLinkedLists 
 {
