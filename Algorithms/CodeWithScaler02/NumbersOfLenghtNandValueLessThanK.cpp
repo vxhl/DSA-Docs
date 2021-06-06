@@ -6,7 +6,7 @@ int Solution::solve(vector<int> &A, int B, int C) {
         } 
         int temp = C,count = 0, ans = 0; 
         
-        while(temp)
+        while(temp) 
         {  
             count++; 
             temp /= 10; // Here we are counting how many elements are present in C
