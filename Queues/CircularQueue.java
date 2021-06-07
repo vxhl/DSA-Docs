@@ -138,6 +138,7 @@ public class CircularQueue {
     }
 }
 /* 
+
 Output :
 100 HAS BEEN ENQUEUED
 700 HAS BEEN ENQUEUED
@@ -160,4 +161,5 @@ Data -> 700 200 500 20 56 576 53
 Rear -> 7
 ________________________
 Result of peeking 700
+
 */
