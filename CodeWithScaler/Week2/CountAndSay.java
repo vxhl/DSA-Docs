@@ -1,6 +1,7 @@
 // Problem Statement :
 // The count and say sequence -> 1,11,21,1211,111221,....
 // We are to find the sequnce for the given Nth position
+// Time Complexity : O(N*M) M being the longest sequence length
 
 package CodeWithScaler.Week2;
 
