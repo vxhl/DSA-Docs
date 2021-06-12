@@ -18,11 +18,11 @@ public class CountAndSay {
         int i = 1;
         while(i<A) // As long as A is greater than 1
         {
-        StringBuilder sb = new StringBuilder();
-        int count = 1;
-        for(int j = 1; j<result.length(); j++)
+        StringBuilder sb = new StringBuilder(); // WE use this to append our counts as well as the integers corresponding the count
+        int count = 1; // For length of the current string 
+        for(int j = 1; j<result.length(); j++) //Then we start a for loop for the length of the resultant string as of now
         {
-            if(result.charAt(j)==result.charAt(j-1))
+            if(result.charAt(j)==result.charAt(j-1)) // 
             {
                 count++;
             }
@@ -45,7 +45,7 @@ public class CountAndSay {
         return result;
     }
     public static void main(String[] args) {
-        int n = 3;
+        int n = 4;
         System.out.println(countAndSay1(n));
 
     }
