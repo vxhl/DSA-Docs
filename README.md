@@ -21,4 +21,3 @@ Step 4 - Create Pull Request (contribute to the original repository)
 
 Step 5 - We will review it and push in after a review on your approach and comments more specifically.
 
-Looking forward to your PR 🙃
