@@ -16,7 +16,7 @@ public class CountAndSay {
         }
         String result = "1"; // We know that result is 1 when greater than 0
         int i = 1;
-        while(i<A) // As long as A is greater than 1
+        while(i<A) // As long as A is greater than 1 ( Applies from next condition )
         {
         StringBuilder sb = new StringBuilder(); // WE use this to append our counts as well as the integers corresponding the count
         int count = 1; // For length of the current string 
@@ -45,7 +45,7 @@ public class CountAndSay {
         return result;
     }
     public static void main(String[] args) {
-        int n = 4;
+        int n = 3;
         System.out.println(countAndSay1(n));
 
     }
