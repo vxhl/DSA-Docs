@@ -15,7 +15,7 @@ public  class SlidingWindowsMaximum {
         }
     }
     static class Solution {
-        
+
         // DO NOT MODIFY THE ARGUMENTS WITH "final" PREFIX. IT IS READ ONLY
         public int[] slidingMaximum(final int[] A, int B) 
         {
@@ -41,7 +41,7 @@ public  class SlidingWindowsMaximum {
             
             }
             // Now we check for the rest of the array
-            for(; i<n; i++)
+            for(; i<n; i++) 
             {
                 ans[i-B] = A[dq.peekFirst()]; // Our first element gets appended
                 // Now we set the condition for whenever our number gets out of the window
