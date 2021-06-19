@@ -76,13 +76,12 @@ class BinarySearchTree:
                 self.right_child.remove_node(self.value, self) # Now we remove our value from the right subtree
 
             return True
-
+    # function to remove a node
     def clear_node(self):
         self.value = None
         self.left_child = None
 
     # inorder to find the minimum value in a subtree
-    # we use this for removing a node with 2 children 
     def find_minimum_value(self):
         if self.left_child:
             return self.left_child.find_minimum_value()
