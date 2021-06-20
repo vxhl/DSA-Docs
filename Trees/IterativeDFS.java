@@ -37,7 +37,7 @@ class IterativeBinaryTree
                     curr = curr.left; // And then we traverse the left subtree
                 }
                 curr = s.pop(); // After we have traversed all of the left subtree we pop each element ( which will always be a left subtree element and print them 
-                System.out.println(curr.key + " ");
+                System.out.print(curr.key + " ");
                 curr = curr.right; // After printing the said left subtree element we check if that node had anything in it's right. If it does, in the next iteration we print 
                 // THe right element and push it into the stack otherwise we return null.
             }
@@ -64,6 +64,25 @@ class IterativeBinaryTree
                 }
             }
         }
+        void IterativePreOrder(TreeNode root)
+        {
+            // We first create a node stack and push the root into the stack
+            Stack<TreeNode> nodeStack = new Stack<TreeNode>();
+            nodeStack.push(root);
+            while(!nodeStack.isEmpty())
+            {
+                TreeNode myNode = nodeStack.pop();
+                System.out.print(myNode.key + " ");
+                if(myNode.right!=null)
+                {
+                    nodeStack.push(myNode.right);
+                }
+                if(myNode.left!=null)
+                {
+                    nodeStack.push(myNode.left);
+                }
+            }
+        }
          
         public static void main(String[] args) {
             IterativeBinaryTree tree = new IterativeBinaryTree();
@@ -72,8 +91,15 @@ class IterativeBinaryTree
             tree.root.right = new TreeNode(3);
             tree.root.left.left = new TreeNode(4);
             tree.root.left.right = new TreeNode(5);
+            System.out.print(" The Iterative Inorder traversal is : ");
             tree.IterativeInorder(); 
+            
+            System.out.print(" The Iterative postOrder traversal is : ");
             tree.postOrderIterative(tree.root);
+            
+            System.out.print(" The Iterative preOrder traversal is : ");
+
+            tree.IterativePreOrder(tree.root);
         }
     }
 
