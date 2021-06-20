@@ -15,7 +15,7 @@ class TreeNode
         }
     }
 
-class BinaryTree
+class IterativeBinaryTree
     {   
         TreeNode root;
 
@@ -42,14 +42,38 @@ class BinaryTree
                 // THe right element and push it into the stack otherwise we return null.
             }
         }
+
+        void postOrderIterative(TreeNode root) {
+            Stack<TreeNode> stack = new Stack<>();
+            while(true) {
+                while(root != null) {
+                    stack.push(root);
+                    stack.push(root);
+                    root = root.left;
+                }
+                 
+                // Check for empty stack
+                if(stack.empty()) return;
+                root = stack.pop();
+                 
+                if(!stack.empty() && stack.peek() == root) root = root.right;
+                 
+                else {
+                     
+                    System.out.print(root.key + " "); root = null;
+                }
+            }
+        }
+         
         public static void main(String[] args) {
-            BinaryTree tree = new BinaryTree();
+            IterativeBinaryTree tree = new IterativeBinaryTree();
             tree.root = new TreeNode(1);
             tree.root.left = new TreeNode(2);
             tree.root.right = new TreeNode(3);
             tree.root.left.left = new TreeNode(4);
             tree.root.left.right = new TreeNode(5);
             tree.IterativeInorder(); 
+            tree.postOrderIterative(tree.root);
         }
     }
 
