@@ -1,0 +1,160 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch PalindromeNoExtraSpace",
+            "request": "launch",
+            "mainClass": "Algorithms.Mathematical.PalindromeNoExtraSpace",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
+            "name": "Launch AmazingSubArrays",
+            "request": "launch",
+            "mainClass": "CodeWithScaler.Week2.AmazingSubArrays",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
+            "name": "Launch CountAndSay",
+            "request": "launch",
+            "mainClass": "CodeWithScaler.Week2.CountAndSay",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
+            "name": "Launch ZigZagString",
+            "request": "launch",
+            "mainClass": "CodeWithScaler.Week2.ZigZagString",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
+            "name": "Launch SlidingWindowsMaximum",
+            "request": "launch",
+            "mainClass": "CodeWithScaler.Week3.SlidingWindowsMaximum",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
+            "name": "Launch LargestNumber",
+            "request": "launch",
+            "mainClass": "DailyInterviewBit.LargestNumber",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
+            "name": "Launch MemoisationMatrixChainMultiplication",
+            "request": "launch",
+            "mainClass": "DynamicProgramming.MemoisationMatrixChainMultiplication",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
+            "name": "Launch TabulationMatrixChainMultiplication",
+            "request": "launch",
+            "mainClass": "DynamicProgramming.TabulationMatrixChainMultiplication",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
+            "name": "Launch CircularQueue",
+            "request": "launch",
+            "mainClass": "Queues.CircularQueue",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
+            "name": "Launch Queue",
+            "request": "launch",
+            "mainClass": "Queues.Queue",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
+            "name": "Launch QueueWithArrays",
+            "request": "launch",
+            "mainClass": "Queues.QueueWithArrays",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
+            "name": "Launch BalancingBrackets",
+            "request": "launch",
+            "mainClass": "Stacks.BalancingBrackets",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
+            "name": "Launch InfixtoPostfix",
+            "request": "launch",
+            "mainClass": "Stacks.InfixtoPostfix",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
+            "name": "Launch PostfixEval",
+            "request": "launch",
+            "mainClass": "Stacks.PostfixEval",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
+            "name": "Launch ReverseStringUsingStack",
+            "request": "launch",
+            "mainClass": "Stacks.ReverseStringUsingStack",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
+            "name": "Launch StackAsLinkedLists",
+            "request": "launch",
+            "mainClass": "Stacks.StackAsLinkedLists",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
+            "name": "Launch StacksUsingArrays",
+            "request": "launch",
+            "mainClass": "Stacks.StacksUsingArrays",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
+            "name": "Launch BinaryTree",
+            "request": "launch",
+            "mainClass": "Trees.BinaryTree",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
+            "name": "Launch IterativeBinaryTree",
+            "request": "launch",
+            "mainClass": "Trees.IterativeBinaryTree",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
+            "name": "Launch LevelOrderBinaryTree",
+            "request": "launch",
+            "mainClass": "Trees.LevelOrderBinaryTree",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
+            "name": "Launch ZigZagString(1)",
+            "request": "launch",
+            "mainClass": "ZigZagString"
+        }
+    ]
+}
