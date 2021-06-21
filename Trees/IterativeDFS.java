@@ -42,25 +42,23 @@ class IterativeBinaryTree
                 // THe right element and push it into the stack otherwise we return null.
             }
         }
-
+        
         void postOrderIterative(TreeNode root) {
-            Stack<TreeNode> stack = new Stack<>();
+            Stack<TreeNode> stack = new Stack<>(); // We create a new stack
             while(true) {
-                while(root != null) {
+                while(root != null) { // Whenever root is null we push our root into the stack twice
                     stack.push(root);
                     stack.push(root);
-                    root = root.left;
+                    root = root.left; // And we do this for the entire left subtree
                 }
-                 
-                // Check for empty stack
                 if(stack.empty()) return;
-                root = stack.pop();
-                 
-                if(!stack.empty() && stack.peek() == root) root = root.right;
+                root = stack.pop(); // We then set root as the top element of the stack
+                
+                if(!stack.empty() && stack.peek() == root) root = root.right; // If our stack is not empty and the top element of the stack is equal to th stack we traverse the right subtree
                  
                 else {
                      
-                    System.out.print(root.key + " "); root = null;
+                    System.out.print(root.key + " "); root = null; // If right child is null then we print our element
                 }
             }
         }
@@ -68,18 +66,18 @@ class IterativeBinaryTree
         {
             // We first create a node stack and push the root into the stack
             Stack<TreeNode> nodeStack = new Stack<TreeNode>();
-            nodeStack.push(root);
-            while(!nodeStack.isEmpty())
+            nodeStack.push(root); // We first push in the root of the tree
+            while(!nodeStack.isEmpty()) // Now as long as our stack is not empty
             {
-                TreeNode myNode = nodeStack.pop();
-                System.out.print(myNode.key + " ");
-                if(myNode.right!=null)
+                TreeNode myNode = nodeStack.pop(); // We create a new node and set it as the top element of the stack
+                System.out.print(myNode.key + " "); // We then print the top element
+                if(myNode.right!=null) // After printing we check for it's right child and push it in
                 {
-                    nodeStack.push(myNode.right);
+                    nodeStack.push(myNode.right); // We are pushing in the right child first because according to LIFO we need to process our left child first
                 }
                 if(myNode.left!=null)
                 {
-                    nodeStack.push(myNode.left);
+                    nodeStack.push(myNode.left); // We then push in our left child
                 }
             }
         }
@@ -102,4 +100,7 @@ class IterativeBinaryTree
             tree.IterativePreOrder(tree.root);
         }
     }
+/* Output : 
+The Iterative Inorder traversal is : 4 2 5 1 3  The Iterative postOrder traversal is : 4 5 2 3 1  The Iterative preOrder traversal is : 1 2 4 5 3
 
+*/
