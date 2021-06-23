@@ -53,6 +53,15 @@ class DiameterBinaryTree
         // and right subtree + 1
         // WE DEFINE OUR INDUCTION
         height.h = Math.max(lheight.h, rheight.h) + 1;
+        /*
+        In the below statement we have defined two expressions to get the max out of
+        The first statement `lheight.h + rheight.h + 1` gives us the diameter when the diameter passes
+        through the root. But when it does not pass through the root, meaning the maximum diameter is either on
+        the left or right subtrees. So we take the max of diameter of left subtree and diameter of right subtree
+        */ 
+
+
+
         return Math.max(lheight.h + rheight.h + 1, Math.max(ldiameter,rdiameter));
 
     }
