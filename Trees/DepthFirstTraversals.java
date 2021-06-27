@@ -16,11 +16,11 @@ package Trees;
             left = right = null;
         }
     }
-    class BinaryTree
+    class topViewTree
     {
         // We initialise the root for the binary tree and set it to null for now
         Node root; 
-        BinaryTree() // Constructor for the root 
+        topViewTree() // Constructor for the root 
         {
             root = null;
         }
@@ -77,7 +77,7 @@ package Trees;
         }
         
         public static void main(String[] args) {
-            BinaryTree tree = new BinaryTree();
+            topViewTree tree = new topViewTree();
             tree.root = new Node(1);
             tree.root.left = new Node(2);
             tree.root.right = new Node(3);
