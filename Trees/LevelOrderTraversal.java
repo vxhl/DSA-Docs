@@ -85,30 +85,7 @@ class LevelOrderBinaryTree
     For each node, first the node is visited then we put it's child nodes in a FIFO queue
     Time Complexity -> O(N)
     */
-    // My Implementation -> This worked but we get some sort of syntax error with Deque
-    /*
-    void QueueLevelOrder()
-    {
-        // First I defined the queue as LinkedList
-        Deque<TreeNode1> dq = new LinkedList<TreeNode1>();
-        if(root == null)
-        {
-            return; // Checking the corner cases
-        } 
-        TreeNode1 temp = root; // WE assign a new node temp as root
-        while(true)
-        {
-            System.out.print(temp.data + " "); // We then first print the root element
-            if(temp.left!=null || temp.right!=null)
-            { 
-                dq.add(temp.left); // and go on to add it's left and right child to the queue
-                dq.add(temp.right);
-            }
-            temp = dq.pop(); // Then we set the temp to our first element of queue that is the children
-            
-        }
-    } 
-    */
+    
     void QueueLevelOrder()
     {
        Queue<TreeNode1> queue = new LinkedList<TreeNode1>();
