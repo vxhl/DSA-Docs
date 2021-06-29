@@ -30,11 +30,11 @@ class Height
 
 class DiameterBinaryTree
 {   
-    static TreeNode3 root;
+    TreeNode3 root;
 
     // Approach 1: Dynamic Programmming for trees ->> BASE CASE > HYPOTHESIS > INDUCTION
     // Time complexity -> O(N)
-    public static int DiameterOfBinaryTree(TreeNode3 root, Height height)
+    int DiameterOfBinaryTree(TreeNode3 root, Height height)
     {
         // Let us first define the height of our left and right subtree
         Height lheight = new Height();
