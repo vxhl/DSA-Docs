@@ -73,7 +73,7 @@ public static void main(String[] args) {
         tree.root = new TreeNode(20);
         tree.root.left = new TreeNode(8);
         tree.root.left.left = new TreeNode(4);
-        tree.root.left.right = new TreeNode(12);
+        tree.root .left.right = new TreeNode(12);
         tree.root.left.right.left = new TreeNode(10);
         tree.root.left.right.right = new TreeNode(14);
         tree.root.right = new TreeNode(22);
@@ -81,3 +81,7 @@ public static void main(String[] args) {
         tree.BoundaryTraversal(root);
 }
 }
+/*
+The Boundary Traversal of the binary tree is: 
+20 8 4 10 14 25 22 
+*/

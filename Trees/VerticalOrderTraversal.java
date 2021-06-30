@@ -22,6 +22,16 @@ import java.util.TreeMap;
 import java.util.Vector;
 import java.util.Map.Entry;
 
+class TreeNode
+{
+    int key;
+    TreeNode left, right;
+    TreeNode(int data)
+    {
+        key = data;
+        left = right = null;
+    }
+}
 class Values
 {
     int max, min;
@@ -118,7 +128,7 @@ class VerticalOrderTree
         // For printing the node at every horizontal distance
         for(Entry<Integer, Vector<Integer>> entry: m.entrySet())
         {
-            System.out.print(entry.getValue());
+            System.out.print(entry.getValue().key);
         }
     }
 
@@ -142,10 +152,13 @@ class VerticalOrderTree
         System.out.print("Vertical order traversal without Map : ");
         tree.verticalOrderTraversal();
         System.out.println();
-        System.out.print("Vertical order traversal without Map : ");
+        System.out.print("Vertical order traversal with Map : ");
         tree.printMapVerticalOrder();
 
     }
 
 }
-
+/*
+Vertical order traversal without Map : 4 2 1 5 6 3 8 7 9 
+Vertical order traversal with Map : [4][2][1, 5, 6][3, 8][7][9]
+*/

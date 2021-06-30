@@ -95,7 +95,8 @@ public static void main(String[] args)
 /* 
 Output: 
 Following are nodes in 
-top view of Binary Tree2
+top view of Binary Tree
+2
 1
 3
 6
