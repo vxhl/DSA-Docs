@@ -16,9 +16,15 @@ public class peakOfArray {
     // Time Complexity: O(N)
     static int peakElement(int[] arr)
     {
-        int n = arr.length;
-        if(arr[0]>arr[1]) return arr[0];
-        else if(arr[n-1]>arr[n-2]) return arr[n-1];
+        int n = arr.length; // Length of the array
+        // If our first element is the peak 
+        if(arr[0]>arr[1]) return arr[0]; 
+        // If our last element is our answer
+        if(arr[n-1]>arr[n-2]) return arr[n-1];
+        // If only one element in the array
+        if (n==1) return arr[0];
+
+
         for(int i = 1; i< n-1; i++)
         {
             if(arr[i]>arr[i+1] && arr[i]>arr[i-1])
@@ -49,7 +55,7 @@ public class peakOfArray {
             {
                 mid = mid-1;
             }
-            else if(mid+1>=0 && A[mid+1]>A[mid])
+            if(mid+1>=0 && A[mid+1]>A[mid])
             {
                 mid = mid+1;
             }
