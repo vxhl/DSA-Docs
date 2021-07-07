@@ -31,6 +31,8 @@ class TreeNode
         key = data;
         left = right = null;
     }
+    public TreeNode() {
+    }
 }
 class Values
 {
