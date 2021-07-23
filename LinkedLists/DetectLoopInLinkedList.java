@@ -16,6 +16,60 @@ exists a loop.
 
 package LinkedLists;
 
-public class DetectLoopInLinkedList {
-    
+import java.util.HashSet;
+
+public class DetectLoopInLinkedList 
+{
+    static NODE head;
+    static class NODE
+    {
+        int data;
+        NODE next;
+        NODE(int key)
+        {
+            key = data;
+            next = null;
+        }
+    }
+    static boolean detectloop(NODE head)
+    {
+        HashSet<NODE>s = new HashSet<NODE>();
+        while(head!=null)
+        {
+            if(s.contains(head))
+            {
+                return true;
+            }
+            s.add(head);
+        }
+        return false;
+    }
+    static public void push(int new_data)
+    {
+        /* 1 & 2: Allocate the Node &
+                  Put in the data*/
+        NODE new_node = new NODE(new_data);
+ 
+        /* 3. Make next of new Node as head */
+        new_node.next = head;
+ 
+        /* 4. Move the head to point to new Node */
+        head = new_node;
+    }
+    public static void main(String[] args) {
+        DetectLoopInLinkedList llist = new DetectLoopInLinkedList();
+ 
+        llist.push(20);
+        llist.push(4);
+        llist.push(15);
+        llist.push(10);
+ 
+        /*Create loop for testing */
+        llist.head.next.next.next.next = llist.head;
+ 
+        if (detectloop(head))
+            System.out.println("Loop found");
+        else
+            System.out.println("No Loop");
+    }
 }
