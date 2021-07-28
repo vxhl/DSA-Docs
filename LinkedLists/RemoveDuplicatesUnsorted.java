@@ -23,7 +23,7 @@ public class RemoveDuplicatesUnsorted {
         // elements comparison in the linkedlist
         Node ptr1 = null, ptr2 = null, dupe = null;
         ptr1 = head;
-
+ 
         /*Pick elements one by one*/
         while(ptr1 != null && ptr1.next != null)
         {
