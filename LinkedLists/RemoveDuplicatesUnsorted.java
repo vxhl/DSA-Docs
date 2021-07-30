@@ -1,5 +1,7 @@
 package LinkedLists;
 
+import java.util.HashSet;
+
 import javax.lang.model.util.ElementScanner6;
 
 public class RemoveDuplicatesUnsorted {
@@ -49,6 +51,34 @@ public class RemoveDuplicatesUnsorted {
 
     }
 }
+    // Approach 2: Using Hashing
+    static Node removeDupicatesUnsortedHashing(Node head)
+    {
+        HashSet<Integer> m = new HashSet<>();
+        Node curr = head;
+        Node prev = null;
+        
+        while(curr!=null)
+        {
+            int x = curr.data;
+            if(m.contains(x))
+            {
+                prev.next = curr.next;
+                System.gc();
+            }
+            else
+            {
+                m.add(x);
+                prev = curr;
+            }
+            curr = curr.next;
+        }
+        return head;
+    }
+
+
+
+
 void printList(Node node)
     {
         while (node != null) {
@@ -71,7 +101,7 @@ public static void main(String[] args) {
             "Linked List before removing duplicates : \n ");
         list.printList(head);
  
-        list.removeDupesUnsorted();
+        removeDupicatesUnsortedHashing(head);
         System.out.println("");
         System.out.println(
             "Linked List after removing duplicates : \n ");
