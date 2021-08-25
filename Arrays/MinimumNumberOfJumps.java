@@ -16,7 +16,7 @@ import java.util.*;
 
 public class MinimumNumberOfJumps {
     public static void main(String[] args) {
-        int[] arr = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+        int[] arr = {2, 3, 1, 1, 2, 4, 2, 0, 1, 1};
         int count = 0;
         int jumps = 0;
         int n = arr.length;
