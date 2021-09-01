@@ -27,10 +27,14 @@ public class FindDuplicates
         // First let us declare the slow and fast pointers
         int slow = nums[0];
         int fast = nums[0];
-        while(slow!=fast)
+        while(true)
         {
             slow = nums[slow];
             fast = nums[nums[fast]];
+            if(slow==fast)
+            {
+                break;
+            }
 
         }
         fast = nums[0];
@@ -39,7 +43,7 @@ public class FindDuplicates
             slow = nums[slow];
             fast = nums[fast];
         }
-        return nums[slow];    
+        return slow;    
     }
      public static void main(String[] args) {
          int[] arr = {1,3,4,2,2};
