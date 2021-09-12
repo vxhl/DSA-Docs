@@ -64,7 +64,7 @@ public class SpiralTraversalMatrices {
             l++;
         
         }
-        // For printing the first row in the matrix
+        // Approach II: Nick White Solution
         
     }
     public static void main(String[] args) {
