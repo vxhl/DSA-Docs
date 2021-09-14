@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch MaxRectangle",
+            "request": "launch",
+            "mainClass": "Matrices.MaxRectangle",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
             "name": "Launch LeftViewBinaryTree",
             "request": "launch",
             "mainClass": "Trees.LeftViewBinaryTree",
