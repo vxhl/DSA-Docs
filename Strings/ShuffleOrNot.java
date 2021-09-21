@@ -54,3 +54,11 @@ public class ShuffleOrNot {
     }
     
 }
+
+/*
+Takeaways: 
+The String problems I have done till now have all done a great job in making the concepts of pointers very clear.
+How to use multiple pointers to traverse multiple strings and comprare them is pretty much clear to me, all that's left is to 
+revise them or do more problems myself without any help.
+
+*/
