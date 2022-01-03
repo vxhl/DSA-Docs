@@ -28,6 +28,19 @@ public class ReverseString {
         }
          
     }
+    // Recursive Method
+    static void reverseRecursive(char[] arr)
+    {
+        if((arr==null)||(arr.length()-1))
+        {
+            System.out.println(arr);
+        }
+        else
+        {
+            System.out.println(arr[arr.length-1]);
+            reverseRecursive(arr);
+        }
+    }
     public static void main(String[] args) {
         char[] arr = {'h','e','l','l','o'};
         System.out.println("The reversed String is: ");

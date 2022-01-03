@@ -4,9 +4,11 @@ Check whether string is palindrome or not.
 Input: S = "abba"
 Output: 1
 */
+
 package Strings;
 
-public class CheckPalindromString {
+public class CheckPalindromString 
+{
 
     static boolean checkPalindrom(String arr)
     {
@@ -26,6 +28,7 @@ public class CheckPalindromString {
         }
         return true;
     }
+
     public static void main(String[] args) {
         String arr = "MADAMM";
         System.out.print(checkPalindrom(arr));
