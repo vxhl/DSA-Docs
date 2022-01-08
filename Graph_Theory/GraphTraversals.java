@@ -61,10 +61,14 @@ public class GraphTraversals
             }
 
         }
+        // Once we are out of the loop and the queue is empty
+        // We set the cur node as the destination
         int cur = destination;
         int dis = 0;
+        // Now for printing the graph we do the following function
         while(parent[cur]!=-1)
         {
+            // We keep printing and then set cur as the next node? 
             System.out.print(cur+"->");
             cur = parent[cur];
             dis++;
