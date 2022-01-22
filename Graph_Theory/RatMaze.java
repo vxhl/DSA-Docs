@@ -63,7 +63,7 @@ class Solution3
             int nexti = i+di[idx];
             int nextj = j+dj[idx];
             // We now set the boundary conditions to check if the next traversal is possible and can be visited by refering to our visited array
-            if(nexti>=0 && nextj>=0 && nexti<n && nextj<n && vis[nexti][nextj] == 0  && maze[nexti][nextj] == 1)
+            if(nexti>=0 && nextj>=0 && nexti<n && nextj<n && vis[nexti][nextj] == 0 && maze[nexti][nextj] == 1)
             {
                 // We then first mark the current node as visited
                 vis[i][j] = 1;

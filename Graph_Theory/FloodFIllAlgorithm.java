@@ -85,7 +85,7 @@ class Solution5
     // We take a new function that will fill one pixel
     
     public void fill(int[][] image, int sr, int sc, int color, int newColor)
-    {   if(image[sr][sc] != color || sr<0 || sc<0 || sr >= image.length || sc >= image[0].length)
+    {   if( sr<0 || sc<0 || sr >= image.length || sc >= image[0].length ||image[sr][sc] != color)
         {
             return;
         }
