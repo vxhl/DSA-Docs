@@ -20,7 +20,9 @@ public class permutations
     which is n!/(n-r)!so from that we just get the number of permutations that can be made but we do not actually get
     the permutations obviously.
     */
+    
 
+    // Approach 1 using a boolean freq array
     private static void permuteutil(int[] nums, ArrayList<Integer> ds, List<List<Integer>> ans, boolean freq[])
     {
         // base case
@@ -51,6 +53,35 @@ public class permutations
 
             }
         }
+    }
+
+    // Approach 2 using swapping algorithm
+    private static void permuteUtilsII(int ind, int[] nums, List<List<Integer>> ans)
+    {
+        // First of all we define our base case
+        if(ind == nums.length)
+        {
+            List<Integer> ds = new ArrayList<>();
+            for(int i=0; i<nums.length; i++)
+            {
+                ds.add(nums[i]);
+            }
+            ans.add(new ArrayList<>(ds));
+        }
+
+        for(int i = ind; i<nums.length; i++)
+        {
+            swap(nums, i, ind);
+            permuteUtilsII(ind+1, nums, ans);
+            swap(nums, i, ind);
+        }
+    }
+
+    private static void swap(int[] nums, int i , int j)
+    { 
+        int t = nums[i];
+        nums[i] = nums[j];
+        t = nums[j];
     }
 
 
