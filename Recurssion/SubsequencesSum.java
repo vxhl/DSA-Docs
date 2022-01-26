@@ -26,6 +26,7 @@ class SubsequncesSum
         
     }
 
+    // Program to print just one subsequence sum that adds up to target
     static boolean printSSSumOne(int ind, ArrayList<Integer> ds , int asum, int[] arr, int k)
     {
         if(ind == arr.length)
