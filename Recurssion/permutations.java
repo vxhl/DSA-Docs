@@ -71,9 +71,9 @@ public class permutations
 
         for(int i = ind; i<nums.length; i++)
         {
-            swap(nums, i, ind);
+            swap(nums, ind, i);
             permuteUtilsII(ind+1, nums, ans);
-            swap(nums, i, ind);
+            swap(nums, ind, i);
         }
     }
 
@@ -81,7 +81,7 @@ public class permutations
     { 
         int t = nums[i];
         nums[i] = nums[j];
-        t = nums[j];
+        nums[j] = t;
     }
 
 
