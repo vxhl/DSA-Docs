@@ -31,7 +31,7 @@ public class ReverseString {
     // Recursive Method
     static void reverseRecursive(char[] arr)
     {
-        if((arr==null)||(arr.length()-1))
+        if((arr==null))
         {
             System.out.println(arr);
         }
