@@ -13,14 +13,14 @@ The seekh or meatball queue has [7 8 9 3] this distribution. At the first servin
 Then, it is: [9 3 5 6],  [3 5 6 7], [5 6 7 1], [6 7 1 3], [7 1 3 4], [1 3 4 5], [3 4 5], [4 5 1], [5 1 2], [1 2 3], [2 3], [3], [1], [0]
 So the last served meatball belongs to the 3rd person.
 */
-
 package infyTQ2022_JavaPractice;
 import java.util.*;
 
-class Solution
+
+public class biggestMeatBall
 {
     // Approach 1: Brute Force
-    static int biggestMeatBall(int N, int D, int[] arr)
+    static int biggestMeatBall2(int N, int D, int[] arr)
     {
         if(N==1)
         {
@@ -38,9 +38,9 @@ class Solution
         // is not equal to 0
         // If i want the index to be tracked then the most obvious answer is ofc a HashMap
         // But is using both queue and a hashmap a very effective approach? 
-        int i = 0;
+        int i = 1;
 
-        while(!q.isEmpty())
+        while(q.peek() != 0)
         {
 
             i++;
@@ -48,20 +48,24 @@ class Solution
             {
                 i = i-N+1;
             }
-
             int x = q.poll();
             int readd = x-D;
             q.add(readd);
         }
         return i;
     }
-}
-class DriverClass
-{
+    
+    // Approach 2: From Prepinsta
+
+
+    
     public static void main(String[] args) {
         int N = 4;
         int D = 2;
         int arr[] = {7,8,9,3};
-        Solution.biggestMeatBall(N,D,arr);
-    }
+        System.out.println(biggestMeatBall2(N,D,arr));
 }
+}
+
+
+    

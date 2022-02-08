@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch NumberFollowingPattern",
+            "request": "launch",
+            "mainClass": "infyTQ2022_JavaPractice.NumberFollowingPattern",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
+            "name": "Launch biggestMeatBall",
+            "request": "launch",
+            "mainClass": "infyTQ2022_JavaPractice.biggestMeatBall",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
             "name": "Launch MaxRectangle",
             "request": "launch",
             "mainClass": "Matrices.MaxRectangle",
