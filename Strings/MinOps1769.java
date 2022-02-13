@@ -19,28 +19,48 @@ import java.util.*;
 public class MinOps1769 {
 
 
-    // Approach 2: Leetcode
+    // Approach 2: Leetcode - O(N)
     public static int[] minOps(String boxes)
     {
-        int[] res = new int[boxes.length()];
-    for (int i = 0, ops = 0, cnt = 0; i < boxes.length(); ++i) {
-       res[i] += ops;
-       cnt += boxes.charAt(i) == '1' ? 1 : 0;
-       ops += cnt;
-    }    
-    for (int i = boxes.length() - 1, ops = 0, cnt = 0; i >= 0; --i) {
-        res[i] += ops;
-        cnt += boxes.charAt(i) == '1' ? 1 : 0;
-        ops += cnt;
-    }
-    return res;
+        // A - Total number of steps
+        // a - Balls on the right side
+        // b - Balls on the left side
+        int count = 0;
+        int[] steps = new int[boxes.length()];
+        int behind = 0;
+        int ahead = 0;
+        for(int i= 0; i<boxes.length(); i++)
+        {
+            if(boxes.charAt(i) == '1')
+            {
+                ahead++;
+                steps[0] += i;
+            }
+        }
+        // Now let us implement the formula that we gathered
+        if(boxes.charAt(0) == '1')
+        {
+            ahead--;
+            behind++;
+        }
+        
+        for(int i = 1; i<boxes.length(); i++)
+        {
+            steps[i] = steps[i-1] - ahead + behind;
+            if(boxes.charAt(i) == '1')
+            ahead++;
+            behind--;
+        }
+
+        return steps;
+        
     }
 
 
-    
+
     public static void main(String[] args) {
         String boxes = "110";
-
+        System.out.println(minOps(boxes).toString());
         List<Integer> ops = new ArrayList<>(); 
         int countOps = 0;
         for(int i=0; i<boxes.length(); i++)
