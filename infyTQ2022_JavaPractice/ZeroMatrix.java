@@ -8,13 +8,13 @@ public class ZeroMatrix {
 
     public static int[][] zeromatrix_boolean(int[][] arr)
     {
-        boolean[] zero_rows = new boolean[arr.length];
-        boolean[] zero_cols = new boolean[arr.length];
+        boolean[] zero_rows = new boolean[arr.length*arr.length];
+        boolean[] zero_cols = new boolean[arr.length*arr.length];
 
-        for(int i=0; i<arr.length; i++)
+        for(int i=0; i<arr.length*arr.length; i++)
         {
             zero_rows[i] = false;
-            zero_cols[i] = false;
+            zero_rows[i] = false;
         }
         for(int i=0; i<arr.length; i++)
         {
@@ -23,7 +23,7 @@ public class ZeroMatrix {
                 if(arr[i][j] == 0)
                 {
                     zero_rows[i] = true;
-                    zero_rows[j] = true;
+                    zero_cols[j] = true;
                 }
             }
 
