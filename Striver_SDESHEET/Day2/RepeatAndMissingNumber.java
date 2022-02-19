@@ -7,44 +7,95 @@ A,B belong to 1-N
 
 package Striver_SDESHEET.Day2;
 
-import java.util.HashSet;
+import java.util.*;
 
 public class RepeatAndMissingNumber {
-    // Is it just me or does this one again need the 
-    // Floyd's cycle finding algorithm cause it sure looks like it -_- 
+    // Approach 1: O(N^2)
     public static int[] repeatMissing(int[]arr)
     {
-        int slow = arr[0];
-        int fast = arr[0];
-
-        while(true)
-        {
-            slow = arr[slow];
-            fast = arr[arr[fast]];
-            if(slow == fast) break;
-        }
-
-        fast = arr[0];
-
-        while(slow!=fast)
-        {
-            slow = arr[slow];
-            fast = arr[fast];
-            if(slow==fast)
-            break;
-        }
+        Arrays.sort(arr);
         int[] res = new int[2];
-        res[0] = slow;
-        res[1] = 0;
+        if(arr.length == 2){  
+            if(arr[0] == arr[1]) 
+                res[0] = arr[0]; 
+                if(res[0]>1)
+                    res[1] = 1;
+                else res[1] = 2;
+            return res; 
+        } 
+        
+        int flag = 0;
+        // We define our index initially since we need to know where our array will find it's missing or duplicate number
+        // and then we start from i+1 in the next loop
+        int i = 0;
+        // We need a flag for determining whether the dupes come first or the missing number
+        for(i=0; i<arr.length; i++)
+        {
+            // Either of these cases will be executed first and we break out of the loop
+            
+            // Case 1: For finding the dupe
+            
+            
+            if(arr[i] - 1 != i)
+            {
+                res[1] = i+1;
+                flag = 1;
+                break;
+            }
+            
+            
+            if(arr[i] == arr[i+1])
+            {   
+                res[0] = arr[i];
+                flag = 0;
+                break;
+            }
+
+            // Since we have our array as sorted we break out of the loop as 
+            // soon as we find that our element when subtracted with it' s index is greater than 1
+            // and we add it to the resultant array
+            
+        }
+
+        if(flag == 1)
+        {
+            // Condition for duplicate as missing is found
+            for(int j = i; j<arr.length-1; j++)
+            {
+                if(arr[j] == arr[j+1])
+                {   
+                    res[0] = arr[j];
+                }
+            }
+
+        }
+        else
+        {
+            // condition for missing since duplicate is found
+            for(int j = i+1; j<arr.length-1; j++)
+            {
+                if(arr[j] - 1 != j)
+                {
+                res[1] = j+1;
+                }
+            }
+
+        }
+
         return res;
 
+        
     }
     
 
     public static void main(String[] args) {
-        int[] arr = {3,1,2,5,3};
-        repeatMissing(arr);
-        for(int i: repeatMissing(arr))
+        int[] arr = {1,3,3,4,5,6};
+        int[] arr2 = {1,2,2,3,5,6};
+        int[] arr3 = {1,1,3,4,5,6};
+        int[] arr4 = {1,1};
+        int[] arr5 = {2,2};
+        //repeatMissing(arr2);
+        for(int i: repeatMissing(arr5))
         {
             System.out.println(i + " ");
         }
