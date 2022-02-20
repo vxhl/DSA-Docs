@@ -86,7 +86,23 @@ public class RepeatAndMissingNumber {
 
         
     }
-    
+
+    // Approach 2: The XOR method but without sorting this time.
+    public static int[] repMis(int[] arr)
+    {
+        int[] res = new int[2];
+        for(int i=1; i<arr.length-1; i++)
+        {
+            if(arr[i-1] == arr[i])
+            {
+                res[0] = arr[i];
+            }
+            arr[i] ^= arr[i];
+            if(arr[i] != 0) res[1] = i;
+            
+        }
+        return res;
+    } 
 
     public static void main(String[] args) {
         int[] arr = {1,3,3,4,5,6};
@@ -94,8 +110,9 @@ public class RepeatAndMissingNumber {
         int[] arr3 = {1,1,3,4,5,6};
         int[] arr4 = {1,1};
         int[] arr5 = {2,2};
+        int[] arr6 = {5,1,3,2,3,4}; // 3, 6
         //repeatMissing(arr2);
-        for(int i: repeatMissing(arr5))
+        for(int i: repeatMissing(arr6))
         {
             System.out.println(i + " ");
         }

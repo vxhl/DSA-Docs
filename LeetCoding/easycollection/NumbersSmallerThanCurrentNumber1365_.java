@@ -5,7 +5,7 @@ have to count the number of valid j's such that j != i and nums[j] < nums[i].
 
 */
 
-package LeetCoding;
+package LeetCoding.easycollection;
 
 public class NumbersSmallerThanCurrentNumber1365_
 {
