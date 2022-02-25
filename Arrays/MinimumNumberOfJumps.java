@@ -18,12 +18,12 @@ public class MinimumNumberOfJumps {
 
 
     // Approach 1: Naive Recursive Approach 
-    // Time Complexity: O(N^2)
+    // Time Complexity: O(2^N)
     static int minjumps(int arr[], int l, int h)
     {
         // Base Case: When source and destination are same
         if(h==l) return 0;
-        
+         
         // When nothing is reachable from the given source
         if(arr[l]==0) return -1;
 
@@ -43,6 +43,8 @@ public class MinimumNumberOfJumps {
     }
     // arr[] = { 1, 3, 6, 1, 0, 9 };
  
+
+    // O(N^2) approach
     static int minJumpsDynamicApproach(int[] arr, int n)
     {
         // jumps[n-1] will hold our result
@@ -67,6 +69,52 @@ public class MinimumNumberOfJumps {
         return jumps[n-1];
 
     }
+
+
+    // O(N) Approach
+    static int minJumpsN(int[] arr)
+    {
+        // We first intialise the maximum number of steps
+        int maxR = arr[0];
+        // We set out current number of steps 
+        int step = arr[0];
+        // We already have done one jump if our arr[0]>0
+        int jumps = 1;
+
+        if(arr.length==1) return 0;
+        if(arr[0] == 0) return -1; 
+
+        // We start from our second element now
+        for(int i=1; i<arr.length; i++)
+        {
+            // If our index is at the last index we return the jumps
+            if(i==arr.length-1) return jumps; 
+            // We assign maxR and get the maxR between our already assigned reach and current reach
+            maxR = Math.max(maxR, i+arr[i]);
+            // Wait this is similar to my approach ain't it? 
+            // We then reduce the number of steps
+            step--;
+            // Now if we have reached our current amount of reach
+            if(step==0)
+            {
+                // We increase our jumps
+                jumps++;
+                // If our current i is greater than our maxR or equal
+                if(i>=maxR)
+                {
+                    return -1;
+                }
+                else
+                {
+                    step = maxR - i;
+                }
+            }
+
+        }
+        
+        return jumps;
+    }
+
 
 
     public static void main(String[] args) {
