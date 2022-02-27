@@ -39,37 +39,7 @@ public class MergeWithoutExtraSpace
         System.out.println(Arrays.toString(result));
     }
 
-    // Approach 2: GAP Algorithm
-    // static void MergewithGAP(int arr1[], int arr2[])
-    // {
-    //     int n1 = arr1.length;
-    //     int n2 = arr2.length;
-    //     double gap = Math.ceil((n1+n2)/2);
-    //     int gap1 = (int)gap;
-    //     int[] result = new int[n1+n2];
-    //     System.arraycopy(arr1, 0, result, 0, n1);  
-    //     System.arraycopy(arr2, 0, result, n1, n2);
-    //     for(int i=0; i<result.length; i++)
-    //     {
-    //         if(gap1>result.length)
-    //         {
-    //         gap1 /= 2;
-    //         }
-    //         if(result[i]>result[i+gap1])
-    //         {
-    //             int temp = result[i];
-                
-    //             result[i] = result[gap1];
-    //             result[gap1] = temp;
-    //         }
-    //         gap1++;
-
-    //     }
-    //     for(int i: result)
-    //     {
-    //         System.out.print(i+" ");
-    //     }
-    // }
+    
     static int nextGap(int gap)
     {   // Since we need the floor value of the division we add the modulo value as well
         if(gap<=1) return 0;
