@@ -1,5 +1,5 @@
 package Arrays.SlidingWindowsProblems;
-
+import java.util.*;
 public class FirstNegativeNumberSizek {
     public long[] printFirstNegativeInteger(long arr[], int N, int K)
     {
