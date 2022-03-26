@@ -30,7 +30,7 @@ public class KthSmallest {
     return pq.peek();
 }
 public static void main(String[] args) {
-    int[] arr = {7,10,4,3,20,15};
+    int[] arr = {7,10,4,20,15};
     Scanner sc = new Scanner(System.in);
     System.out.print("Enter the kth value for smallest element position: ");
     int k = sc.nextInt();

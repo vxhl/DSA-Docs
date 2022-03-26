@@ -15,6 +15,8 @@ Output:
 
 package DSA450Restart.Arrays;
 import java.util.*;
+
+import Arrays.rotate;
 public class AltNegPos {
     
     // We first write the function for rotating by one position
@@ -62,14 +64,57 @@ public class AltNegPos {
           i++;
       }
     }
+
+    public static void rotate(int[] arr, int start, int end)
+    {
+        int temp = arr[end];
+        for(int i=end; i>start; i--)
+        {
+            arr[i] = arr[i-1];
+        }
+        arr[start] = temp;
+
+    }
+
+    public static void altnegpos1(int[] arr, int n)
+    {
+        boolean flag = true; // we initialise our boolean value
+        int indx = 0;
+        for(int i=0; i<n; i++)
+        {
+            if(i%2==0 && indx == i)
+            {
+                if (flag == false) flag = true;
+                else flag = false;
+                indx++;
+            }
+            else if(i%2==0 && indx!=i)
+            {
+                rotate(arr, indx, i);
+                indx = indx+2;
+                flag = false;
+            }
+            else
+            {
+                continue;
+            }
+
+        }
+
+        for(int i: arr)
+        {
+            System.out.print( i + " ");
+        }
+
+    }
     
 
     
 
     public static void main(String[] args) {
-        int arr[] = {-1,-2,-3,4,5,6}; // Output: {4,-1,5,-2,6,-3}
-        altnegpos(arr, arr.length);
+        int arr[] = {-1, -2, -3, 4, 5, 6}; // Output: {4,-1,5,-2,6,-3}
+        // altnegpos(arr, arr.length);
+        altnegpos1(arr, arr.length);
 
     }
-
 }

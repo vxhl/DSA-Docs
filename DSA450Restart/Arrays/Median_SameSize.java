@@ -70,7 +70,16 @@ public class Median_SameSize {
         // Base case? 
         if(ea-sa == 1)
         {
-            return (Math.max(arr1[sa], arr2[sb]) + Math.min(arr1[ea],arr2[eb]))/2;
+            // This is for the even case
+            // What about the odd case? 
+            if((arr1.length + arr2.length)%2 == 0)
+                return (Math.max(arr1[sa], arr2[sb]) + Math.min(arr1[ea],arr2[eb]))/2;
+            else
+            {
+                return Math.min(arr1[ea], arr2[sb]);
+            }
+
+
         }
 
         int m1 = median(arr1, sa, ea);
@@ -92,12 +101,13 @@ public class Median_SameSize {
 
     }
     public static void main(String[] args) {
-        int[] arr1 = {1,2,3,6};
+        int[] arr1 = {1,2,3,5,7};
         int[] arr2 = {4,6,8,10};
 
         // System.out.print(median_samesize(arr1, arr2));
         int n = arr1.length;
-        System.out.print(median_sameSize_LogN(arr1, arr2, 0,n-1 , 0, n-1));
+        int n2 = arr2.length;
+        System.out.print(median_sameSize_LogN(arr1, arr2, 0,n-1 , 0, n2-1));
         
     
     }
