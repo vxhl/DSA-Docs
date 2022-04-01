@@ -22,6 +22,9 @@ public class kthMin {
         return maxHeap.peek();
         
     } 
+
+
+    
     public static void main(String[] args) {
         int[] arr = {7,10,4,20,15};
         System.out.println(kthSmallest(arr, 3));
