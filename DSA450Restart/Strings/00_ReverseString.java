@@ -1,6 +1,6 @@
 package DSA450Restart.Strings;
 
-public class ReverseString {
+class Solution {
     public static void rev( char[] s)
     {
         int start = 0;
