@@ -127,7 +127,7 @@ public class MaxAreaHistogram {
         return maxA;
     }
     public static void main(String[] args) {
-        long[] arr = {1,2,3,4,5};
+        long[] arr = {1,8,6,2,5,4,8,3,7};
         System.out.print(MAH(arr));
 
         // for(int i: NSL(arr))
