@@ -14,7 +14,7 @@ public class SegregateNegPos {
     }
 
 
-     public void segregateElements(int arr[], int n)
+     public static void segregateElements(int arr[], int n)
     {
         int p1 = 0;
         int p2 = p1+1;
@@ -41,10 +41,6 @@ public class SegregateNegPos {
 
     public static void main(String[] args) {
         int[] arr = {-1,-2,3,4,-4,9}; // => 3,4,9,-1,-2,-4
-
-        for(int i: segregate(arr))
-        {
-            System.out.print(i+ " ");
-        }
+        segregateElements(arr, arr.length);
     }
 }

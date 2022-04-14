@@ -19,7 +19,8 @@ public class UnionOfTwoArrays
     {
         Map<Integer, Integer> mp = new HashMap<Integer, Integer>();
         
-        // Insering array elements in np
+        // Insering array elements in mp
+        // Actually could just use a hashset instead
         for(int i=0; i<A.length; i++)
         {
             mp.put(A[i], i);
