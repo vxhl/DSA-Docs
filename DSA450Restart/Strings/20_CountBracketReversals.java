@@ -8,47 +8,36 @@ class BracketReversals
             }{{}}{{{
 
         */
-
         Deque<Character> st = new LinkedList<Character>();
         int count = 0;
         for(int i=0; i<s.length(); i++)
         {
-            while(s.charAt(i) != '{')
+            if(s.charAt(i) == '{')
             {
-                count++;
-            }
-
-             
-            
                 st.push(s.charAt(i));
-            
-            
-                if(s.charAt(i) == '}')
-                {
-                    if(st.peek() != '{')
-                    {
-                        count++;
-                    }
-                    else
-                    {
-                        st.pop();
-                    }
-                    
             }
-
-
+            else
+            {
+                if(!st.isEmpty())
+                {
+                    st.pop();
+                }
+                else
+                {
+                    st.push('{');
+                    count++;
+                }
+            }
         }
 
-        return count;
-
-
-
+        return (st.size())%2 == 0 ? (int)(st.size()/2)+count :  -1; 
     }
 
     public static void main(String[] args) {
         String S = "}{{}}{{{"; 
+        String S1 = "{{";
 
-        System.out.print(bracketReversals(S));
+        System.out.print(bracketReversals(S1));
 
     }
 
