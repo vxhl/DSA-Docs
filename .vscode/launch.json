@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch WordSearch",
+            "request": "launch",
+            "mainClass": "Arrays.WordSearch",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
             "name": "Launch MaxAreaHistogram",
             "request": "launch",
             "mainClass": "DSA450Restart.Matrices.MaxAreaHistogram",
