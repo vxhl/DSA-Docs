@@ -30,7 +30,7 @@ class Solution
                 // so we do our binary search in this array
                 return binarySearch(arr, n, m, k, mid);
             }
-            // If not in range we either go down or go up the rows
+            // If not in range wxe either go down or go up the rows
 
             if(k<arr[mid][0])
             {
