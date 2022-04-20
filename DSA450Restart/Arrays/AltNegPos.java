@@ -16,10 +16,8 @@ Output:
 package DSA450Restart.Arrays;
 import java.util.*;
 
-import Arrays.rotate;
 public class AltNegPos {
     
-    // We first write the function for rotating by one position
     public static void altnegpos(int arr[], int n) {
         // code here
        ArrayList<Integer> posNums = new ArrayList<>();
