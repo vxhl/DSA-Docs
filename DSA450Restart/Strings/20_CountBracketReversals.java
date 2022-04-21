@@ -35,7 +35,7 @@ class BracketReversals
 
     public static void main(String[] args) {
         String S = "}{{}}{{{"; 
-        String S1 = "{{";
+        String S1 = "{}{}}{int";
 
         System.out.print(bracketReversals(S1));
 
