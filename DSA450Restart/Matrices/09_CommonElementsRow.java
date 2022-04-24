@@ -77,7 +77,48 @@ class SolutionCont
         // }
         
     }
+    // For non square matrix
+    public List<Integer> intersection(int[][] arr) {
+        List<Integer> intersected = new ArrayList<>();
+        HashMap<Integer, Integer> mp = new HashMap<>();
+        int n = arr.length;
+        if(n == 1)
+        {
+            for(int i=0; i<arr[0].length; i++)
+            {
+                intersected.add(arr[0][i]);
+                
+            }
+            Collections.sort(intersected);
+            return intersected;
+        }
+        
+       
+        for(int j=0; j<arr[0].length; j++)
+        {
+               mp.put(arr[0][j], 1);
+        }
 
+            
+        
+        for(int i=1; i<n; i++)
+        {
+            for(int j=0; j<arr[i].length; j++)
+            {
+                if(mp.get(arr[i][j])!=null && mp.get(arr[i][j]) == i)
+                {
+                    mp.put(arr[i][j], i+1);
+                    
+                    if(i==n-1)
+                    {
+                        intersected.add(arr[i][j]);
+                    }
+                }
+            }
+        }
+        Collections.sort(intersected);
+        return intersected;
+    }
 
 
 }
@@ -85,11 +126,7 @@ class DriverClassMatrices
 {
     
     public static void main(String[] args) {
-        int[][] arr = {{1, 2, 1, 4, 8},
-        {3, 7, 8, 5, 1},
-        {8, 7, 7, 3, 1},
-        {8, 1, 2, 7, 9},
-       };
+        int[][] arr = {{3,1,2,4,5},{1,2,3,4},{3,4,5,6}};
        ArrayList<Integer> ans = SolutionCont.findCommonElements(arr);
        for(int i=0; i<ans.size(); i++)
        {
