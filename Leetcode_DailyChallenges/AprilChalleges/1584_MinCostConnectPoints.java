@@ -1,11 +1,8 @@
-package DSA450Restart.Strings;
+package Leetcode_DailyChallenges.AprilChalleges;
 import java.util.*;
 
 class costConnectPoints
 {
-    /*
-        So it is all about understanding how minimum spanning tree works and using the minheap inorder to make sense of it
-    */
     public static int minCost(int[][] points)
     {
         int cost = 0;
