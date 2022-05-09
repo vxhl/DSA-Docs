@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Solution_123",
+            "request": "launch",
+            "mainClass": "Leetcode_DailyChallenges.MayChallenge.Solution_123",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
+            "name": "Launch Solve",
+            "request": "launch",
+            "mainClass": "DSA450Restart.SearchingSorting.Solve",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
             "name": "Launch Solution_rearrange",
             "request": "launch",
             "mainClass": "DSA450Restart.Strings.Solution_rearrange",
