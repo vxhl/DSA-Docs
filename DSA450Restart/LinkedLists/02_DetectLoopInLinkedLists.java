@@ -32,11 +32,14 @@ class DetectLoops {
         // Now we set another node from the start of the linkedlist
         // and move it in the same speed as our slow pointer until they meet
         ListNode start = head;
+        ListNode prev = null;
         while(start!=slow)
         {
+            prev = start;
             start = start.next;
             slow = slow.next;
         }
+        prev.next = null;
         if(start==slow)
         {
             return true;

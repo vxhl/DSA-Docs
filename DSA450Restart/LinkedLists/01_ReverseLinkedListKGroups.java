@@ -2,13 +2,13 @@ package DSA450Restart.LinkedLists;
 
 class ReverseLinkedListKGroups {
 
-    public static Node reverseK(Node node, int k) {
+    public static ListNode reverseK(ListNode node, int k) {
         // Your code here
         if (node == null)
             return null;
-        Node curr = node;
-        Node prev = null;
-        Node next = null;
+        ListNode curr = node;
+        ListNode prev = null;
+        ListNode next = null;
 
         int count = 0;
 
