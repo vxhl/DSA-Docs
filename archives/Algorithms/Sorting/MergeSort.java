@@ -24,7 +24,6 @@ public class MergeSort
             {   
                 new_A[k] = A[i]; // We assign the element to our new sorted array
                 i++;
-             
             }
             else // Otherwise if the other side is smaller we add that into our sorted array
             {
@@ -56,7 +55,7 @@ public class MergeSort
         }
 
     }
-    static void MergeSort(int[] A, int low, int high )
+    static void MergeSort(int[] A, int low, int high)
     {
         if(low<high)
         {
