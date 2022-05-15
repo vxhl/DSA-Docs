@@ -27,8 +27,8 @@ class Solution_3Sum
                         ds.add(arr[low]);
                         ds.add(arr[high]);
                         res.add(ds);
-                        // After adding to the list we run the loop for our low condition 
-                        // so that we skip all the repeating elements that we have in our traversal
+                        // After adding to the list we run another loop so that we do not encounter more elements having the same low
+                        // that we already added and we do the same for our high
                         while(low<high && arr[low] == arr[low+1]) low++;
                         // We do the same for our high condition
                         while(low<high && arr[high] == arr[high-1]) high--;
@@ -92,9 +92,7 @@ class Solution_3Sum
                     
                     else if(arr[low]+arr[high]<-(arr[i])) low++;
                     else high--;
-                }
-                
-                
+                } 
             }
         }
         

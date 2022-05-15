@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch ThreeSumLL",
+            "request": "launch",
+            "mainClass": "DSA450Restart.LinkedLists.ThreeSumLL",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
             "name": "Launch findPairsGivenSum",
             "request": "launch",
             "mainClass": "DSA450Restart.LinkedLists.findPairsGivenSum",
