@@ -7,7 +7,7 @@ Output: [[7,4,1],[8,5,2],[9,6,3]]
 
 package Striver_SDESHEET.Day2;
 
-import Arrays.rotate;
+// import Arrays.rotate;
 
 
 public class RotateImage48 {

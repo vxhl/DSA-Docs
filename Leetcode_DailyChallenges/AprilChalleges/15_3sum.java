@@ -1,4 +1,4 @@
-package DSA450Restart.Arrays;
+package Leetcode_DailyChallenges.AprilChalleges;
 import java.util.*;
 class Solution_3Sum
 {
