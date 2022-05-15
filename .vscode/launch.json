@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch findPairsGivenSum",
+            "request": "launch",
+            "mainClass": "DSA450Restart.LinkedLists.findPairsGivenSum",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
             "name": "Launch Solution_123",
             "request": "launch",
             "mainClass": "Leetcode_DailyChallenges.MayChallenge.Solution_123",
