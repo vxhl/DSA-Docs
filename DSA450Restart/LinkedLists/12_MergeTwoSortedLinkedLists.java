@@ -8,7 +8,7 @@ class MergeTwoSortedLinkedLists {
 
     // Approach 2: Using Swapping and localpointers in constant space
     public ListNode mergeTwoLists(ListNode head1, ListNode head2) {
-        // We will be using the optimised no extra space method
+        // We will be usi ng the optimised no extra space method
         
         if(head1==null) return head2;
         if(head2 == null) return head1;
