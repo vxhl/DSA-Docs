@@ -30,14 +30,14 @@ class ksorteddll
         dlnode res = null;
         dlnode curr = null;
         for (int i = 0; head != null && i <= x; i++)
-    {
-       
-      // push the node on to 'pq'
-      pq.add(head);
- 
-      // move to the next node
-      head = head.next;
-    }
+        {
+            
+            // push the node on to 'pq'
+            pq.add(head);
+        
+            // move to the next node
+            head = head.next;
+        }
         // After doing the above operation the pointer for head arrives at
         // (k+1)th position and in the next iterations we traverse from there
         // dlnode res = new dlnode(0); // our result will be in res.next
