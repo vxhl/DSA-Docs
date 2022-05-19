@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch LongestIncreasingPath",
+            "request": "launch",
+            "mainClass": "Leetcode_DailyChallenges.MayChallenge.LongestIncreasingPath",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
             "name": "Launch ksorteddll",
             "request": "launch",
             "mainClass": "DSA450Restart.LinkedLists.ksorteddll",
