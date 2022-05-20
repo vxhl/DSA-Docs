@@ -9,7 +9,6 @@ class Solution_3Sum
         // We are only iterating till the last 3rd elmeent since that is till where we will have 3 elements in our range
         for(int i=0; i<arr.length-2; i++)
         {
-            // I do not need to look at the solution. I can do this by myself pretty easily tbh. 
             // For the first number in the arr or if it is not the first number and it is also not a repetition of the previous number we have traversed then we do the following
             if(i==0 || (i>0 && arr[i-1]!=arr[i]))
             {
