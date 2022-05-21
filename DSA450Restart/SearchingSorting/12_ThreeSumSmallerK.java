@@ -1,5 +1,5 @@
 package DSA450Restart.SearchingSorting;
-
+import java.util.*;
 class Solution_ThreeSumSmallerK
 {
     long countTriplets(long arr[], int n,int target)
