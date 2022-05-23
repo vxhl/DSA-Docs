@@ -47,9 +47,7 @@ class MergeSortTwoLinkedLists {
         if(head1==null) return head2;
         if(head2 == null) return head1;
         
-        if(head1.val
-         > head2.val
-        )
+        if(head1.val > head2.val)
         {
             ListNode t = head1;
             head1 = head2;

@@ -5,7 +5,7 @@ class RemoveDupes
     ListNode removeDuplicates(ListNode head)
     {
 	    // Your code here	
-	    Set<ListNode> set = new HashSet<>();
+	    // Set<ListNode> set = new HashSet<>();
 	    ListNode curr = head;
 	    ListNode next = null;
 	    while(curr!=null && curr.next!=null)
