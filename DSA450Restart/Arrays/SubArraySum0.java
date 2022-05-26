@@ -11,8 +11,8 @@ public class SubArraySum0 {
         int sum = 0;
  
         // Traverse through the given array
-        for (int i = 0; i < arr.length; i++)
-        {
+        for (int i = 0; i < arr.length-1; i++)
+        {   
             // Add current element to sum
             sum += arr[i];
  
