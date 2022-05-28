@@ -30,9 +30,23 @@ class SetBitCount_Solution
         }
         
     }
+    // GFG Optimised solution
+    static void sortBySetBitCount2(Integer arr[], int n)
+    { 
+        // Your code goes here
+        Arrays.sort(arr, (a,b)-> Integer.compare(Integer.bitCount(b), Integer.bitCount(a)));
+    } 
 
-    public static void sortSetBitCount(int[] arr)
-    {
-
+    // Leetcode optimised solution
+    public int[] sortByBits(int[] arr) {
+        int n = arr.length;
+        for(int i = 0 ; i < n ; i++)
+        arr[i] += 10001 * Integer.bitCount(arr[i]);
+        
+        Arrays.sort(arr);
+        
+        for(int i = 0 ; i < n ; i++)
+        arr[i] = arr[i] % 10001;
+        return arr; 
     }
 }
