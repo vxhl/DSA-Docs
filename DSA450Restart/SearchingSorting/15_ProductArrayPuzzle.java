@@ -2,32 +2,75 @@ import java.util.*;
 
 class Solution_Puzzles
 {
+    // Optimised O(N) time and constant space
+    public int[] productExceptSelf1(int[] arr)
+    {
+        int product = 1;
+        int countOfZeroes = 0;
+        
+        for(int i: arr)
+        {
+            if(i!=0)
+            {
+                product = product*i;
+            }
+            else
+            {
+                countOfZeroes++;
+            }
+        }
+        
+        int[] res = new int[arr.length];
+        
+        for(int i=0; i<arr.length; i++)
+        {
+            // So now the conditions
+            // 0,0,2,3,4 => 0,0,0,0,0 
+            if(arr[i]!=0 && countOfZeroes>0 || arr[i] == 0 && countOfZeroes-1>0)
+            {
+                res[0] = 0;
+            }
+            else if(arr[i]!=0)
+            {
+                res[i] = product/arr[i];
+            }
+            else if(arr[i] == 0)
+            {
+                res[i] = product;
+            }
+        }
+        
+        return res;
+        
+        
+    }
 
-    
-        //     public int[] productExceptSelf(int[] arr) {
-        //         int[] res = new int[arr.length];
+            // Brute force O(n2)    
+            public int[] productExceptSelf2(int[] arr) {
+                int[] res = new int[arr.length];
         
-        //         for(int i=0; i<arr.length; i++){
-        //             int iter = 0; // So this will loop over our entire array
-        //             int prod = 1; // this is what we need in our result array
-        //             while(iter!=arr.length){
+                for(int i=0; i<arr.length; i++){
+                    int iter = 0; // So this will loop over our entire array
+                    int prod = 1; // this is what we need in our result array
+                    while(iter!=arr.length){
                         
-        //                 // So we multiply prod as long as it is not ith
-        //                 if(iter!=i)
-        //                 {
-        //                     // 3*5*6*2
-        //                     prod = prod*arr[iter];
-        //                 }
-        //                 iter++;
-        //             }
-        //             // We store the prod in our res[i];
-        //             // Then we move on to the next element
-        //             res[i] = prod;
-        //         }
+                        // So we multiply prod as long as it is not ith
+                        if(iter!=i)
+                        {
+                            // 3*5*6*2
+                            prod = prod*arr[iter];
+                        }
+                        iter++;
+                    }
+                    // We store the prod in our res[i];
+                    // Then we move on to the next element
+                    res[i] = prod;
+                }
         
-        //         return res;
-        //     }
+                return res;
+            }
             
+            // Using prefix and suffix products
             public static int[] productExceptSelf(int[] arr) {
                 int[] res = new int[arr.length];
                 // We simply use the prefix sum thing but how?
