@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Solution_Puzzles",
+            "request": "launch",
+            "mainClass": "Solution_Puzzles",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
             "name": "Launch LongestIncreasingSubsequence",
             "request": "launch",
             "mainClass": "Leetcode_DailyChallenges.MayChallenge.LongestIncreasingSubsequence",
