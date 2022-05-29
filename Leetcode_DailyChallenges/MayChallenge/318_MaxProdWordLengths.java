@@ -39,7 +39,6 @@ class MaxProdWordLengths {
     public int maxProduct2(String[] words) {
         int n = words.length;
         int[] state = new int[n];
-        G
         for(int i=0; i<n; i++)
         {
             state[i] = stateBased(words[i]);

@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch MaxProdWordLengths",
+            "request": "launch",
+            "mainClass": "MaxProdWordLengths",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
             "name": "Launch Solution_Puzzles",
             "request": "launch",
             "mainClass": "Solution_Puzzles",
