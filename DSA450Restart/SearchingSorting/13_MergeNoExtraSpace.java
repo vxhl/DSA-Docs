@@ -2,7 +2,7 @@ package DSA450Restart.SearchingSorting;
 import java.util.*;
 class Solutions_MergeNoExtraSpace
 {
-    // This takes n*O(mlogm) time since we are sorting n times the array of length m
+    // This takes O(nmlogm) time since we are sorting n times the array of length m
     public void merge(int arr1[], int arr2[], int n, int m) {
         // code here
         int i = 0;
@@ -32,11 +32,9 @@ class Solutions_MergeNoExtraSpace
     // are greater than the last element of the 2nd array, this means we will be moving to the first element of the n length array every time we move our 
     // pointer for mth node forward. So for every element of 2nd array we will be moving the entire n length of our 1st array
     public void merge2(int arr1[], int arr2[], int n, int m) {
-        
-        
         for(int i=arr2.length-1; i>=0; i--)
         {
-            
+            // We store our last first
             int last = arr1[n-1];
             int j = 0;
             for(j=n-2; j>=0 && arr1[j]>arr2[i]; j--)
