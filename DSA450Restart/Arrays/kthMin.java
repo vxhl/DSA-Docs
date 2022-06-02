@@ -74,7 +74,7 @@ public class kthMin {
         {
             if(arr[p] < pivot)
             {
-                // We swap our element at p with our pivot point
+                // We swap our element at p with our element at i
                 int temp = arr[p];
                 arr[p] = arr[i];
                 arr[i] = temp;

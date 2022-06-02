@@ -48,7 +48,6 @@ class Solutions_MergeNoExtraSpace
                 arr2[i] = last;
             }
         }
-        
     }
 
 
