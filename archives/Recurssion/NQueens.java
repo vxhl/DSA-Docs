@@ -36,7 +36,7 @@ class NQueens {
             }
         }
         
-        
+                    
     }
     
     // We construct our board in the form of List<String>

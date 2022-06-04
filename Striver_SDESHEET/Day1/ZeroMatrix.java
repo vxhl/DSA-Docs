@@ -21,7 +21,6 @@ public class ZeroMatrix {
     }
 
     public static int[][] zeroMatrixUtil(int[][] arr)
-
     {
         int[] rows = new int[arr.length];
         int[] cols = new int[arr[0].length];
@@ -46,7 +45,7 @@ public class ZeroMatrix {
 
             }
 
-            for(int k=0; k<arr[0].length; k++ )
+            for(int k=0;k<arr[0].length;k++)
             {
                 if(rows[k] == 1)
                 {
