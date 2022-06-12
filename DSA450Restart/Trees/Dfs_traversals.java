@@ -1,6 +1,6 @@
 import java.util.ArrayDeque;
 import java.util.Deque;
-
+import java.util.*;
 public class Dfs_traversals {
     class TreeNode
     {
@@ -176,5 +176,69 @@ public class Dfs_traversals {
         }
     }
 
+    void PreInPostTraversals(TreeNode root)
+    {
+        // In one chunk of traversals we are gonna fill all the 3 traversals for our given tree
+        // We will be using one Stack for this
+        Deque<Pair> st = new ArrayDeque<>();
+        st.push(new Pair(root, 1));
+        List<Integer> pre = new ArrayList<>();
+        List<Integer> in = new ArrayList<>();
+        List<Integer> post = new ArrayList<>();
+        if(root == null) return;
+
+        while(!st.isEmpty())
+        {
+            // We intially pop the element from the stack which is marked as preorder
+            Pair it = st.pop();
+
+            if(it.id == 1)
+            {
+                // if we find any element to be marked as 1 it is to go into the preorder array
+                // We then increment it's id so in the next iteration it goes into the inorder array such that
+                // our root now has id 2
+
+                pre.add(it.root.data);
+                it.id++;
+                st.push(it);
+                
+                // We then add the left child into our array and keep adding until our left child becomes null
+                if(it.root.left!=null)
+                {
+                    st.push(new Pair(it.root.left, 1));
+                }
+            }
+            else if(it.id == 2)
+            {
+                // If we find our id to be 2 it goes into our inorder array
+                in.add(it.root.data);
+                it.id++;
+                st.push(it);
+
+                // Similarly for inorder we add the right child into the array and keep adding until our right pointer is null
+                if(it.root.right!=null)
+                {
+                    st.push(new Pair(it.root.right, 1));
+                }
+            }
+            else
+            {
+                // For postorder we simply add the data when we find our id to be greater than 2
+                post.add(it.root.data);
+            }
+
+        }
+    }
+
+    class Pair
+    {
+        TreeNode root;
+        int id;
+        public Pair(TreeNode root, int id)
+        {
+            this.root = root;
+            this.id = id;
+        }
+    }
 
 }
