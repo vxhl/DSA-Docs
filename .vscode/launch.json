@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Bfs_traversals1",
+            "request": "launch",
+            "mainClass": "Bfs_traversals1",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
+            "name": "Launch Bfs_traversals",
+            "request": "launch",
+            "mainClass": "Bfs_traversals",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
             "name": "Launch MaxProdWordLengths",
             "request": "launch",
             "mainClass": "MaxProdWordLengths",

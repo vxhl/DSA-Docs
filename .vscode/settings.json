@@ -2,6 +2,7 @@
     "C_Cpp.errorSquiggles": "Disabled",
     "java.project.sourcePaths": [
         "Leetcode_DailyChallenges/MayChallenge",
-        "DSA450Restart/SearchingSorting"
+        "DSA450Restart/SearchingSorting",
+        "DSA450Restart/Trees"
     ]
 }
