@@ -1,8 +1,6 @@
 import java.util.ArrayDeque;
 import java.util.Deque;
 
-import javax.swing.plaf.basic.BasicInternalFrameTitlePane.SystemMenuBar;
-
 public class Dfs_traversals {
     class TreeNode
     {
@@ -107,7 +105,7 @@ public class Dfs_traversals {
         }
     }
 
-    void IterativePostOrder(TreeNode root)
+    void IterativePostOrder2Stack(TreeNode root)
     {
         Deque<TreeNode> st1 = new ArrayDeque<>();
         Deque<TreeNode> st2 = new ArrayDeque<>();
@@ -131,6 +129,50 @@ public class Dfs_traversals {
         while(!st2.isEmpty())
         {
             System.out.print(st2.pop().data);
+        }
+    }
+
+
+    // HARD 
+    // Now this is very tricky. The trick all lies within curr, temp and ofc the one stack
+    void IterativePostOrder1Stack(TreeNode root)
+    {
+        // We start from the root as usual
+        TreeNode curr = root;
+        Deque<TreeNode> st = new ArrayDeque<>();
+        st.push(root);
+        while(curr!=null || !st.isEmpty())
+        {
+            // Now we traverse all the way till the left end of the tree till our curr becomes null
+            if(curr!=null)
+            {
+                st.push(curr);
+                curr = curr.left;
+            }
+            else
+            {
+                // Once our curr becomes null, we then set a new variable temp that checks on the right child of the subtree on the top of the stack
+                // meaning we are checking whether we are still truly at the leftmost end of the tree
+                TreeNode temp = st.peek().right;
+
+                // If we find that we are indeed at the end of the tree, we do the following
+                if(temp==null)
+                {
+                    temp = st.peek();
+                    st.pop();
+                    System.out.print(temp.data); 
+                    while(!st.isEmpty() && temp == st.peek().right)
+                    {
+                        temp = st.peek();
+                        st.pop();
+                        System.out.println(temp.data);
+                    }   
+                }
+                else
+                {
+                    curr = temp;
+                }
+            }
         }
     }
 
