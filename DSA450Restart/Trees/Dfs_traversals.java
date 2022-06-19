@@ -68,41 +68,25 @@ public class Dfs_traversals {
                 st.push(popped.left);
         }
     }
-    void iterativeInorder(TreeNode root)
-    {
-        Deque<TreeNode> st = new ArrayDeque<>();
-        st.push(root);
+    public List<Integer> inorderTraversal(TreeNode root) {
+        // Now for the iterative approach we need a stack. We use a Deque for this since it is much faster and more flexible
+        Deque<TreeNode> st = new ArrayDeque<>();        
+        List<Integer> ans = new ArrayList<>();
         TreeNode curr = root;
-        while(true)
+        while(curr!=null || !st.isEmpty())
         {
-            // Now we need to first print the left most nodes so
-            // As long as our node is not null we traverse till the end of
-            // left subtree and add them into the stack
-            if(curr!=null)
+            while(curr!=null)
             {
                 st.push(curr);
                 curr = curr.left;
             }
-            else
-            {
-                // When we have finally reached the last left element of
-                // the tree
-                // If we find our stack to be empty we break
-                if(st.isEmpty())
-                {
-                    break;
-                }
-                // We print out all the left element from the subtree
-                curr = st.pop();
-                System.out.println(curr.data);
-                // And we check whether there are node present in the right subtree
-                // If there are then we again start iterating till we reach the last left node
-                // of the right subtree and do the same operations until our stack becomes empty and
-                // we break out of the loop.
-                curr = curr.right;
-            }
-
+            curr = st.pop();
+            ans.add(curr.val);
+            curr = curr.right;
         }
+        return ans;   
+        
+    } 
     }
 
     void IterativePostOrder2Stack(TreeNode root)
