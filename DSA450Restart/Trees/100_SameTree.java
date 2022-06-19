@@ -27,6 +27,7 @@ class Solution {
     public boolean isSameTree(TreeNode p, TreeNode q) {
         if(p==null && q==null) return true;
         if(!check(p,q)) return false;
+        // We take two queues for each tree
         Deque<TreeNode> pStack = new ArrayDeque<>();
         Deque<TreeNode> qStack = new ArrayDeque<>();
         pStack.add(p);
@@ -36,11 +37,13 @@ class Solution {
         {
             p = pStack.poll();
             q = qStack.poll();
-            
+            // We poll and check for each node 
             if(!check(p,q)) return false;
+            // And then we add the following into our queue if our curr node is not null
             if(p!=null)
             {
                 if(!check(p.left, q.left)) return false;
+                // Similarly we do for our left and right subtrees for both nodes and we're donef
                 if(p.left!=null){
                     pStack.add(p.left);
                     qStack.add(q.left);
