@@ -39,6 +39,8 @@ class Solution {
     {
         if(root==null) return 0;
         int left = dfs(root.left);
+        // We check for our left to be -1 initially because we want all our subtrees to follow the conditon
+        // And we also do the same for our right subtree.
         if(left == -1) return -1;
         int right = dfs(root.right);
         if(right == -1) return -1;
