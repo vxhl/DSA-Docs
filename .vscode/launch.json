@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Solution_Dynamic",
+            "request": "launch",
+            "mainClass": "Solution_Dynamic",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
+            "name": "Launch Solution",
+            "request": "launch",
+            "mainClass": "Solution",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
             "name": "Launch Bfs_traversals1",
             "request": "launch",
             "mainClass": "Bfs_traversals1",
