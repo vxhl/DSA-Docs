@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch BottomViewTree",
+            "request": "launch",
+            "mainClass": "BottomViewTree",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
+            "name": "Launch dfs_traversals_explanation",
+            "request": "launch",
+            "mainClass": "DSA450Restart.Trees.dfs_traversals_explanation",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
+            "name": "Launch dfs_traversals_explanation",
+            "request": "launch",
+            "mainClass": "dfs_traversals_explanation",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
+            "name": "Launch dfs",
+            "request": "launch",
+            "mainClass": "dfs",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
             "name": "Launch Solution_Dynamic",
             "request": "launch",
             "mainClass": "Solution_Dynamic",

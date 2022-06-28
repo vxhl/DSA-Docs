@@ -12,7 +12,6 @@ Example:
 
 Output: For the above tree the output should be 5, 10, 3, 14, 25.
 */
-package Trees;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Map;
