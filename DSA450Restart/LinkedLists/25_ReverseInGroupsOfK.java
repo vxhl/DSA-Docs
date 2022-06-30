@@ -48,3 +48,68 @@ class Solution {
        return prev;
    }
 }
+
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    private int length(ListNode head)
+    {
+        int len = 0;
+        while(head!=null)
+        {
+            head = head.next;
+            len++;
+        }
+        return len;
+    }
+    public ListNode reverseKGroup(ListNode head, int k) {
+        // Let's do the iterative approach now
+        // if(head == null) return null;
+        System.out.print(length(head)+ " "+ k);
+        
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
+        ListNode pointer = dummy;
+        
+        while(pointer!=null)
+        {
+            ListNode node = pointer; 
+            for(int i=0; i<k && node!=null; i++)
+            {
+                node = node.next;
+            }
+            
+            if(node == null) break;
+            
+            ListNode prev = null;
+            ListNode curr = pointer.next;
+            ListNode next = null;
+        
+            for(int i=0; i<k; i++)
+            {
+                next = curr.next;
+                curr.next = prev;
+                prev = curr;
+                curr = next;
+            }
+            ListNode tail = pointer.next;
+            tail.next = curr;
+            pointer.next = prev;
+            
+            // We move our pointer forward
+            pointer = tail;
+                
+        }
+        
+        return dummy.next;
+        
+    }
+}
