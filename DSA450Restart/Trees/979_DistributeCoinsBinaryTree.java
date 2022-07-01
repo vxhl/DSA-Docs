@@ -62,7 +62,8 @@ class Solution {
  *     }
  * }
  */
-class Solution {
+ }
+class Solution2 {
     
     int ans = 0;
     public int distributeCoins(TreeNode root) {
@@ -93,4 +94,14 @@ class Solution {
         
     }
 }
+class TreeNode
+{
+    int val;
+    TreeNode left;
+    TreeNode right;
+    public TreeNode(int val)
+    {
+        this.val = val;
+        left = right = null;
+    }
 }
