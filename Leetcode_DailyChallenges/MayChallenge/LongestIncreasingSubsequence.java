@@ -42,7 +42,7 @@ public class LongestIncreasingSubsequence {
     }
 
     public static void main(String[] args) {
-        int[] arr = {5,8,7,1,9};
+        int[] arr = {4,10,3,8,9};
         System.out.println(LongestIncreasingSubsequence(arr));
     }
 
@@ -50,8 +50,8 @@ public class LongestIncreasingSubsequence {
     // Memoisation Solution
 class Solution {
     
-        int[][] dp;
-        public int lengthOfLIS(int[] arr) {
+        static int[][] dp;
+        public static int lengthOfLIS(int[] arr) {
             int n = arr.length;
             
             dp = new int[n][n+1];
@@ -87,6 +87,13 @@ class Solution {
     
             return dp[i][curr+1] = Math.max(include, exclude);
         }
+
+        public static void main(String[] args) {
+            int[] arr = {4,10,3,8,9};
+            System.out.println(lengthOfLIS(arr));
+        }
+
+        
     }
     
 
