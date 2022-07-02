@@ -58,8 +58,38 @@ class LRUCache {
         }
         
     }
-    
 }
+
+
+class LRUCache2 {
+    private LinkedHashMap<Integer, Integer> mp;
+    int capacity = 0;
+    public LRUCache2(int capacity) {
+        this.capacity = capacity;
+        mp = new LinkedHashMap<Integer, Integer>(capacity, 0.75f, true){
+            protected boolean removeEldestEntry(Map.Entry eldest)
+            {
+                return size()>capacity;
+            }
+        };
+    }
+    
+    public int get(int key) {
+        return mp.getOrDefault(key,-1);
+    }
+    
+    public void put(int key, int value) {
+        mp.put(key,value);
+    }
+}
+
+/**
+ * Your LRUCache object will be instantiated and called as such:
+ * LRUCache obj = new LRUCache(capacity);
+ * int param_1 = obj.get(key);
+ * obj.put(key,value);
+ */
+
 
 /**
  * Your LRUCache object will be instantiated and called as such:
