@@ -1,0 +1,2 @@
+INDEX VERSION 1.131+C:\CS_07\Software_Projects\DSAInternshipPreparation\DSA450Restart\LinkedLists\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
