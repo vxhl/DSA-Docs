@@ -12,7 +12,7 @@ static class Node
             next = null;
             arb = null;
         }
-    }
+    }   
     //Function to clone a linked list with next and random pointer.
     Node copyList(Node head) {
         // your code here
