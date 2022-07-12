@@ -56,12 +56,12 @@ public class MajorityElements_II
             {
                 count2++;
             }
-            else if(count1 == 0)
+            if(count1 == 0)
             {
                 curr1 = arr[i];
                 count1 = 1;
             }
-            else if(count2 == 0)
+            if(count2 == 0)
             {
                 curr2 = arr[i];
                 count2 = 1;
