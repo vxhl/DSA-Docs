@@ -66,7 +66,7 @@ class MergeTwoSortedLinkedLists {
             }
             
             if(curr1.val <= curr2.val)
-            {
+            { 
                 res.next = curr1;
                 curr1 = curr1.next;
             }
