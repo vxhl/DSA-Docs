@@ -1,8 +1,5 @@
 class Solution {
     // O(N+M) approach
-
-
-
     // O(N*(MLogM)) approach
     public int[] platesBetweenCandles(String s, int[][] queries) {
         
