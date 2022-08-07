@@ -7,7 +7,8 @@
 
 ## Union-Find Algorithm
 1. Find if path exists in graph using Union Find: https://leetcode.com/problems/find-if-path-exists-in-graph/
+2. Bipartite Graph (Variation 3)
 ## Backtracking in graph
 
-## Traversal Questions
+## Traversal Questions (BFS+DFS)
 1. Bipartite Graph: https://leetcode.com/problems/is-graph-bipartite/
