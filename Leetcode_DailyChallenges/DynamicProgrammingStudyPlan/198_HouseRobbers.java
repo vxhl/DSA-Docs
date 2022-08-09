@@ -1,6 +1,44 @@
 import java.util.*;
 class Solution_Dynamic {
     
+    public int rob_constantSpace(int[]nums){
+        // We first take a previous count for the previous most house
+        int prev1 = nums[0];
+        // We set prev2 for the non adjacent position
+        int prev2 = 0;
+
+        for(int i=0; i<nums.length; i++){
+            int include = nums[i];
+            // If we include we need to be at the 3rd position atleast for having a non adjacent element previously
+            if(i>1){
+                include+=prev2;
+            }
+            // If we exclude we simply start with the current element
+            int exclude = prev1;
+            int curr = Math.max(include, exclude);
+            prev2 = prev1;
+            prev1 = curr;
+        }
+        return prev1;
+
+    }
+
+    
+    public int rob_tabulated(int[] nums) {
+        int[] dp = new int[nums.length];
+        dp[0] = nums[0];
+        for(int i=1; i<nums.length; i++){
+            int include = nums[i];
+            if(i>1){
+                include+=dp[i-2];
+            }
+            int exclude = dp[i-1];
+            dp[i] = Math.max(include, exclude);
+        }
+        return dp[nums.length-1];
+    }
+    
+
     // Memoised
     public int rob(int[] nums) {
         int[] dp = new int[nums.length];
