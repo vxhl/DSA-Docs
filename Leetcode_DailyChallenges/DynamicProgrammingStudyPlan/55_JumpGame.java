@@ -1,7 +1,8 @@
 class Solution {    
-    //         [2,3,1,1,4] -> We need to reach 4 so, n-2 can reach 4, n-3 can reach n-2, n-4 can reach n-3, n-5 can reach n-4 so true
-    //         [3,2,1,0,4] -> n-2 cannot reach n-1, n-3 can reach 0, n-4 can reah 0, n-5 can reach 0 so return false
-    //         [2,0,0]-> n-2 cannot reach n-1, n-3 can reach n-1 so return true
+        // [2,3,1,1,4] -> We need to reach 4 so, n-2 can reach 4, n-3 can reach n-2, n-4 can reach n-3, n-5 can reach n-4 so true
+        // [3,2,1,0,4] -> n-2 cannot reach n-1, n-3 can reach 0, n-4 can reah 0, n-5 can reach 0 so return false
+        // [2,0,0]-> n-2 cannot reach n-1, n-3 can reach n-1 so return true
+
         // Greedy
         public boolean canJump_Greedy(int[] nums) {
             // We loop from the last element of the array, which is the destination for this given problem
