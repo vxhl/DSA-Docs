@@ -16,8 +16,7 @@ class Solution {
                 if(curr<0){
                     curr = 0;   
                 }
-                k = (k+1)%n;
-                
+                k = (k+1)%n;   
             }
         }
         return max;
