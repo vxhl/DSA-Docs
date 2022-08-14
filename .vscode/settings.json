@@ -1,10 +1,10 @@
 {
     "C_Cpp.errorSquiggles": "Disabled",
     "java.project.sourcePaths": [
+        "archives/Trees",
         "Leetcode_DailyChallenges/MayChallenge",
         "DSA450Restart/Trees",
         "DSA450Restart/SearchingSorting",
-        "DSA450Restart/DynamicProgramming_Recursion",
-        "archives/Trees"
+        "CompanySpecificPrep/Cognizant"
     ]
 }
