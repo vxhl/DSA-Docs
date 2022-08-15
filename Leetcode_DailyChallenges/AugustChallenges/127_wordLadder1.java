@@ -1,3 +1,4 @@
+import java.util.*;
 class Solution {
     public int ladderLength(String beginWord, String endWord, List<String> wordList) {
         Deque<String> q = new LinkedList<>();
@@ -9,8 +10,7 @@ class Solution {
         q.offer(beginWord);
         int ans = 0;
         while(!q.isEmpty()){
-            int size = q.size();
-            
+            int size = q.size();    
             while(size-->0){
                 // So we take the string out and check for all the combinations from 0->26 for lowecase letters
                 String curr = q.poll();
