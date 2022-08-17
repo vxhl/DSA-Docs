@@ -3,7 +3,6 @@ import java.util.*;
 class Solution_WordBreak
 {
 
-    // Tabulation Approach
     public static boolean wordBreak(String str, ArrayList<String> wd)
     {
         /*
