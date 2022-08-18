@@ -32,7 +32,7 @@ class Solution {
             suffix[j] = cardPoints[j]+suffix[j+1];
         }
         int card = 0;
-        int totalScore = 0;
+        int totalScore = Integer.MIN_VALUE; // Convers all cases of negative values as well
         while(card<=k)
         {
             totalScore = Math.max(totalScore, prefix[card]+suffix[n-k+card]);
@@ -40,4 +40,22 @@ class Solution {
         }
         return totalScore;
     }
+    public int solve(int[] C, int K) {
+        // Concise sliding windows in constant space
+        int curr = 0;
+        // We first get the total for the first k elements from the front
+        for (int i = 0; i < K; i++) curr += C[i];
+        int max = curr; // For now we set it as max
+        // With i=k-1 meaning at index 2 and j starting to pick from the back
+        // we increment and 
+        for (int i = K - 1, j = C.length - 1; i >= 0; i--, j--) {
+            curr = curr + C[j] - C[i]; // We increment by picking from the back and decrement
+            // the latest value we added at the front
+            max = Math.max(max, curr);
+        }
+        return max;
+        
+    }
+
+
 }
