@@ -1,4 +1,4 @@
-public class Solution {
+class Solution {
     public int coverPoints(int[] A, int[] B) {
         int steps = 0;
         int currX = A[0];
