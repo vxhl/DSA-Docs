@@ -3,9 +3,10 @@
     "java.project.sourcePaths": [
         "archives/Trees",
         "Leetcode_DailyChallenges/MayChallenge",
+        "InterviewBit_Speedrun/Arrays",
         "DSA450Restart/Trees",
         "DSA450Restart/SearchingSorting",
         "CompanySpecificPrep/Cognizant",
-        "InterviewBit_Speedrun/Arrays"
+        "TCS_Codevita/Codeviate#1"
     ]
 }
