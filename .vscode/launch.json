@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch first",
+            "request": "launch",
+            "mainClass": "first",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
+            "name": "Launch patternQuestions",
+            "request": "launch",
+            "mainClass": "patternQuestions",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
+            "name": "Launch magicalCity",
+            "request": "launch",
+            "mainClass": "magicalCity",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
             "name": "Launch SecondLargestElement",
             "request": "launch",
             "mainClass": "SecondLargestElement",

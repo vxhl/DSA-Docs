@@ -2,11 +2,14 @@
     "C_Cpp.errorSquiggles": "Disabled",
     "java.project.sourcePaths": [
         "archives/Trees",
+        "TCS_Codevita/Codeviate#1",
+        "TCS_Codevita",
         "Leetcode_DailyChallenges/MayChallenge",
+        "Leetcode_DailyChallenges/AugustChallenges",
         "InterviewBit_Speedrun/Arrays",
         "DSA450Restart/Trees",
         "DSA450Restart/SearchingSorting",
         "CompanySpecificPrep/Cognizant",
-        "TCS_Codevita/Codeviate#1"
+        "CompanySpecificPrep/Capgemini"
     ]
 }
