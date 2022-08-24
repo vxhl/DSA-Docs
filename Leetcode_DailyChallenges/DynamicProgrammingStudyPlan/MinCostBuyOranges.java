@@ -39,7 +39,7 @@ public class Solution {
                 include = helper(ind, cost, w-ind-1,dp);
                 // If we are not able to get an answer using include, we return a Integer.MAX_VALUE from it, so if we don't
                 if(include!=Integer.MAX_VALUE){
-                    // We add the current cost of the packet
+                // We add the current cost of the packet
                     include += cost[ind];
                 }  
             }    

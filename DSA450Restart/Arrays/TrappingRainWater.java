@@ -35,6 +35,7 @@ public class TrappingRainWater {
 
         return water;
     }
+    
     // Approach - O(N) time and N space approach using prefix and suffix max
 
     public static int trap_water_1(int[] arr)
