@@ -13,7 +13,6 @@ public class ChocolateDistribution {
         while(r<a.size())
         {
             curr = a.get(r) - a.get(l);
-            
             if(curr<max)
             {
                 max = curr;

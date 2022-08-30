@@ -75,8 +75,8 @@ public class SpiralTraversalMatrices {
         int n = 4;
         int m = 4;
         //System.out.println("The given matrix is: ");
-      //  System.out.println(Arrays.deepToString(arr));
-    //    System.out.println("The Spiral Traversal for it is: ");
+        //System.out.println(Arrays.deepToString(arr));
+        //System.out.println("The Spiral Traversal for it is: ");
         //SpiralTraveral(arr, m, n);
         int x = arr.length;
         System.out.println(x);       }

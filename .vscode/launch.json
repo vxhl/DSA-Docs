@@ -6,6 +6,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch InsertK",
+            "request": "launch",
+            "mainClass": "InsertK",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
+            "name": "Launch NthFibo",
+            "request": "launch",
+            "mainClass": "NthFibo",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
+            "name": "Launch Solution_Neil",
+            "request": "launch",
+            "mainClass": "Solution_Neil",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
+            "name": "Launch ClothesOverlap1",
+            "request": "launch",
+            "mainClass": "ClothesOverlap1",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
+            "name": "Launch Solution_PrintSubs",
+            "request": "launch",
+            "mainClass": "Solution_PrintSubs",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
+            "name": "Launch Solution_printSubs",
+            "request": "launch",
+            "mainClass": "Solution_printSubs",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
             "name": "Launch first",
             "request": "launch",
             "mainClass": "first",
