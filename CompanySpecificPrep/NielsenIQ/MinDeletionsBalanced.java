@@ -6,10 +6,10 @@ class Solution {
             if(s.charAt(i)=='a'){
                 dp[i+1] = Math.min(dp[i]+1, bcount);
             }else{
-                dp[i+1] = dp[i];
+            dp[i+1] = dp[i];
                 bcount++;
             }
         }
-        return dp[s.length()];
+    return dp[s.length()];
     }
 }
