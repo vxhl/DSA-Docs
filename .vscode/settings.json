@@ -9,6 +9,7 @@
         "DSA450Restart/Strings",
         "DSA450Restart/SearchingSorting",
         "CompanySpecificPrep/NielsenIQ",
-        "CompanySpecificPrep/Mindtree/SortingAlgorithms"
+        "CompanySpecificPrep/Mindtree/SortingAlgorithms",
+        "archives/Algorithms/Sorting"
     ]
 }

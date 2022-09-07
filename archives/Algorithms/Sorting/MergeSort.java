@@ -2,9 +2,8 @@
 Problem Statement:
 Implement the Merge Sorting technique ( Recursive )
 */
-package Algorithms.Sorting;
 
-public class MergeSort
+class MergeSort
 {
 
     static void Merge(int[] A, int low,int mid,int high)
@@ -77,7 +76,7 @@ public class MergeSort
     public static void main(String[] args) {
         int arr[] = {34,13,67,1,788,10,7,6,4};
         MergeSort ob = new MergeSort();
-        ob.MergeSort(arr, arr[0], arr[arr.length-1]);
+        ob.MergeSort(arr, 0, arr.length-1);
         System.out.println("Sorted Array:  ");
         print_sorted(arr);
     }

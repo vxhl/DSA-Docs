@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch MergeSort",
+            "request": "launch",
+            "mainClass": "MergeSort",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
+            "name": "Launch SortingAlgorithms",
+            "request": "launch",
+            "mainClass": "SortingAlgorithms",
+            "projectName": "DSAInternshipPreparation_4bde4885"
+        },
+        {
+            "type": "java",
             "name": "Launch SelectionSort",
             "request": "launch",
             "mainClass": "SelectionSort",
