@@ -2,6 +2,7 @@
     "C_Cpp.errorSquiggles": "Disabled",
     "java.project.sourcePaths": [
         "archives/Trees",
+        "archives/Algorithms/Sorting",
         "Leetcode_DailyChallenges/MayChallenge",
         "Leetcode_DailyChallenges/AugustChallenges",
         "InterviewBit_Speedrun/Arrays",
@@ -10,6 +11,6 @@
         "DSA450Restart/SearchingSorting",
         "CompanySpecificPrep/NielsenIQ",
         "CompanySpecificPrep/Mindtree/SortingAlgorithms",
-        "archives/Algorithms/Sorting"
+        "archives/Stacks"
     ]
 }

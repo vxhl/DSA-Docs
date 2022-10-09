@@ -1,6 +1,4 @@
 
-package Stacks;
-
 import java.util.*;
 
 public class InfixtoPostfix {

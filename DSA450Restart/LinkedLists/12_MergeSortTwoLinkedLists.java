@@ -10,7 +10,6 @@ class MergeSortTwoLinkedLists {
             return head;
         }
         ListNode mid = findMid(head);
-        
         ListNode left = head;
         ListNode right = mid.next;
         // By doing mid.next as null we break the links and make two
@@ -61,9 +60,7 @@ class MergeSortTwoLinkedLists {
             // We have this temporary node inorder to keep track of our nodes in the head1 side and changing references to head2
             ListNode temp = null;
             
-            while(head1!=null && head1.val
-            <=head2.val
-            )
+            while(head1!=null && head1.val<=head2.val)
             {
                 // We keep running this loop till we find greater elements in our head1
                 // if we don't then in the end we just link our temp to head2 and return our answer

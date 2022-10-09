@@ -9,9 +9,8 @@ o/p => Sorted Array: 3 5 6 8 9 10 12 15 16
 
 */
 
-package Algorithms.Sorting;
 
-public class Quicksort 
+class Quicksort 
 {
     static void swap(int[] A, int i, int j)
     {
@@ -67,7 +66,6 @@ public class Quicksort
     {
         for(int i = 0; i < size; i++)
             System.out.print(arr[i] + " ");
-            
         System.out.println();
     }
 
@@ -79,3 +77,76 @@ public class Quicksort
         printArray(arr, arr.length);
     }
 }
+
+
+
+/**
+ * 
+ * N = 8
+ * 
+ * 8/2^3 = 1
+ * 8 = 2^3
+ * log 8 = 3
+ * For an array of N size
+ * we get logN passes 
+ * O(N*log N)
+ * 
+ * 0 1 2 3 4 5 6 7
+ * 9 3 7 5 6 4 8 2
+ * So in merge sort
+ * 9 3 7 5    6 4 8 2
+ * 
+ * 9 3   7 5                   6 4   8 2
+ *  
+ * 9   3     7   5             6   4    8    2
+ *  
+ * 3 9  5 7                    4 6         2 8
+ *  [3 5 7 9]                       [2 4 6 8]
+ * 
+ * 2 3 4 5 6 7 8 9
+ * 
+ * this merging step takes linear time to merge
+ * [3 5 7 9]
+ * 
+ * 
+    mergeSort(int[] arr, int i, int j){
+        if(i<j){
+            int mid = i + (j-i)/2;
+            9 3 7 5 6 4 8 2
+            // In the first recursion call we are sorting the first half
+            mergesort(arr, i, mid)
+            3 5 7 9 6 4 8 2
+            // In the second call we merge the second half
+            mergesort(arr, mid+1, j);
+            // And in the third call, we take the two halves and merge them together. 
+            3 5 7 9 2 4 6 8
+            merge(arr,i, mid, j);
+            2 3 4 5 6 7 8 9 
+        }
+    }
+
+
+    now for the time complexity we have
+
+    8 
+    and at each level we are splitting the array into two parts
+    levels*N 
+    so to determine the levels
+    8 
+    4 4
+    2 2 2 2
+    1 1 1 1 1 1 1 1
+
+    O(log N)
+    8 = 2^3
+    log 8 = 3
+    log N 
+
+    so the time complexity would be O(N*LogN)
+
+    O(N)+O(logN)
+
+    O(N) space auxiliary space.
+ */
+
+
